@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "taxonomies",
+  "info": {
+    "singularName": "taxonomy",
+    "pluralName": "taxonomies",
+    "displayName": "Taxonomy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article",
+      "inversedBy": "taxonomies"
+    }
+  }
+}
